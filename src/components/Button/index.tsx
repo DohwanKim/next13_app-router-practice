@@ -1,3 +1,6 @@
+'use client';
+import styles from './index.module.css';
+
 const Button = () => {
   return (
     <>
@@ -5,12 +8,10 @@ const Button = () => {
         onClick={() => {
           console.log('!');
         }}
+        className={styles.button}
       >
         버튼
       </button>
-      <div>
-        <input type="text" />
-      </div>
     </>
   );
 };

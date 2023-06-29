@@ -1,7 +1,29 @@
 {
-  "extends": ["next", "prettier"],
+  "plugins": [
+    "perfectionist"
+  ],
+  "extends": [
+    "next",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc"
+      }
+    ]
   }
 }
