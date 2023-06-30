@@ -1,21 +1,13 @@
 {
-  "plugins": [
-    "perfectionist"
-  ],
-  "extends": [
-    "next",
-    "prettier",
-    "plugin:storybook/recommended"
-  ],
+  "plugins": ["perfectionist", "unused-imports"],
+  "extends": ["next", "prettier", "plugin:storybook/recommended"],
   "rules": {
+    "unused-imports/no-unused-imports": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".ts", ".tsx"]
       }
     ],
     "perfectionist/sort-objects": [
