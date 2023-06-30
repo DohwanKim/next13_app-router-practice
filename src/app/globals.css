@@ -2,26 +2,176 @@
 @tailwind components;
 @tailwind utilities;
 
+*:not(font, i, b) {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  --color-default: #000;
+  --color-white: #fff;
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-black: #111;
+  --color-black-90: rgba(17, 17, 17, 0.9);
+  --color-grey1: #f4f4f4;
+  --color-grey1-30: rgba(244, 244, 244, 0.3);
+  --color-grey2: #ddd;
+  --color-grey2-30: rgba(221, 221, 221, 0.3);
+  --color-grey3: #ababab;
+  --color-grey4: #777;
+  --color-error: #f62323;
+  --color-confirm: #25b44d;
+  --color-link: #1a91ff;
+  --fo-color-black: #000;
+  --fo-color-white: #fff;
+  --fo-color-green: #11c656;
+  --fo-color-navy: #002f87;
+  --fo-color-navy-sub: #002554;
+  --fo-color-gray1: #666;
+  --fo-color-gray2: #adadad;
+  --fo-color-gray3: #dddddd;
+  --fo-color-gray4: #f3f3f3;
+  --fo-color-green-8: rgba(17, 198, 86, 0.08);
+  --fo-color-red: #ff3b3b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey3);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-grey2);
+  border-radius: 8px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  color: inherit;
+  font-style: normal;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-break: inherit;
+  word-wrap: inherit;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input_registration_sec input:-webkit-autofill,
+.input_registration_sec input:-webkit-autofill:hover,
+.input_registration_sec input:-webkit-autofill:focus,
+.input_registration_sec input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s;
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #333 !important;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }

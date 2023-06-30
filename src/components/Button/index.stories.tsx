@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Button from './index';
 
 const meta: Meta<typeof Button> = {
@@ -15,5 +14,19 @@ type Story = StoryObj<typeof Button>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <Button />,
+  args: {
+    children: '버튼명 텍스트',
+    disabled: false,
+    size: 'medium',
+    type: 'primary',
+  },
 };
+
+export const Secondary: Story = {
+  args: {
+    ...Primary.args,
+    type: 'secondary',
+  },
+};
+
+export const Disabled: Story = {};

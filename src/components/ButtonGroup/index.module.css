@@ -1,0 +1,17 @@
+.btn_group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn_group button,
+.btn_group a {
+  flex-grow: 1;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
