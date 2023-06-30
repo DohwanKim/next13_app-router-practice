@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/assets/style/globals.css';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 
