@@ -2,6 +2,7 @@
   "plugins": ["perfectionist", "unused-imports"],
   "extends": ["next", "prettier", "plugin:storybook/recommended"],
   "rules": {
+    "react/no-unescaped-entities": "off",
     "unused-imports/no-unused-imports": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
